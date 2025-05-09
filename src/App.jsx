@@ -2,6 +2,47 @@ import { useState } from 'react'
 
 function App() {
 
+  // definisco l'array con gli elementi della mia lista
+  const roadBike = [
+    {
+      id: 1,
+      name: 'Pinarello',
+
+    },
+    {
+      id: 1,
+      name: 'Bianchi',
+
+    },
+    {
+      id: 1,
+      name: 'Santa Cruz',
+    },
+    {
+      id: 1,
+      name: 'Specialized',
+    },
+    {
+      id: 1,
+      name: 'Cannodale',
+
+    },
+    {
+      id: 1,
+      name: 'Trek',
+
+    },
+    {
+      id: 1,
+      name: 'Colnago',
+
+    },
+    {
+      id: 1,
+      name: 'Scott',
+
+    }
+  ];
 
   return (
     <>
