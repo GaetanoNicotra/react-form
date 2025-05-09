@@ -56,17 +56,18 @@ function App() {
 
       <main>
         <div className="container">
+          {/* elenco degli elementi della lista */}
           <ul className="list-group">
-            <li class="list-group-item active" aria-current="true"> Bike list blog</li>
+            <li class="list-group-item active" aria-current="true"> Bike list</li>
             {roadBike.map(bike => (
               <li className='list-group-item' key={bike.id} >{bike.name} </li>
             ))}
-
-            {/*<li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>*/}
           </ul>
+          <form>
+            <div className="input-group mt-3">
+              <input type="text" className='form-controll px-4' placeholder='Inserisci una nuova bici' />
+            </div>
+          </form>
         </div>
       </main>
     </>
