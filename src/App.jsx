@@ -10,35 +10,35 @@ function App() {
 
     },
     {
-      id: 1,
+      id: 2,
       name: 'Bianchi',
 
     },
     {
-      id: 1,
+      id: 3,
       name: 'Santa Cruz',
     },
     {
-      id: 1,
+      id: 4,
       name: 'Specialized',
     },
     {
-      id: 1,
+      id: 5,
       name: 'Cannodale',
 
     },
     {
-      id: 1,
+      id: 6,
       name: 'Trek',
 
     },
     {
-      id: 1,
+      id: 7,
       name: 'Colnago',
 
     },
     {
-      id: 1,
+      id: 8,
       name: 'Scott',
 
     }
@@ -49,7 +49,7 @@ function App() {
       <header>
         <div className="navbar bg-primary-subtle mb-4">
           <div className="container-fluid">
-            <h1>React Blog Form</h1>
+            <h1>React Blog Form (Road Bike🚲)</h1>
           </div>
         </div>
       </header>
@@ -57,12 +57,15 @@ function App() {
       <main>
         <div className="container">
           <ul className="list-group">
-            <li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>
-            <li className='list-group-item'>prova</li>
+            <li class="list-group-item active" aria-current="true"> Bike list blog</li>
+            {roadBike.map(bike => (
+              <li className='list-group-item' key={bike.id} >{bike.name} </li>
+            ))}
 
+            {/*<li className='list-group-item'>prova</li>
+            <li className='list-group-item'>prova</li>
+            <li className='list-group-item'>prova</li>
+            <li className='list-group-item'>prova</li>*/}
           </ul>
         </div>
       </main>
