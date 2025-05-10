@@ -19,11 +19,17 @@ function App() {
   const addBike = (e) => {
     e.preventDefault();
     const newBikeId = bike[bike.length - 1].id + 1;
-    console.log(bike)
     const newBikeObject = { id: newBikeId, name: newBike }
     console.log(newBikeObject)
     setBike([...bike, newBikeObject])
     setNewBike("")
+  };
+
+  const removeBike = (id) => {
+    const newList = bike.filter((b) => {
+      return id !== b.id;
+    });
+    setBike(newList);
   };
 
   return (
@@ -42,7 +48,7 @@ function App() {
           <ul className="list-group">
             <li className="list-group-item active" aria-current="true"> Bike list</li>
             {bike.map(bikeName => (
-              <li className='list-group-item' key={bikeName.id} >{bikeName.name} <button className='btn btn-danger ms-5'>Rimuovi</button></li>
+              <li className='list-group-item' key={bikeName.id} >{bikeName.name} <button className='btn btn-danger ms-5' onClick={() => { removeBike(bikeName.id) }}>Rimuovi</button></li>
             ))}
           </ul>
           <form onSubmit={addBike}>
